@@ -2,6 +2,7 @@ package com.darksouls;
 
 import com.darksouls.block.ModBlocks;
 import com.darksouls.network.ModNetworking;
+import com.darksouls.particle.ModParticles;
 import com.darksouls.sound.ModSounds;
 import com.darksouls.stats.CharacterManager;
 import com.darksouls.stats.StaminaManager;
@@ -22,6 +23,10 @@ public final class DarkSoulsMod implements ModInitializer {
     @Override
     public void onInitialize() {
         ModSounds.init();
+<<<<<<< HEAD
+=======
+        ModParticles.init();
+>>>>>>> ba47194 (Melhora no sistema de BonFire)
         ModBlocks.init();
         ModNetworking.registerServer();
 

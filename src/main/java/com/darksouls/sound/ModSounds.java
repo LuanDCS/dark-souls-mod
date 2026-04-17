@@ -16,6 +16,11 @@ public final class ModSounds {
     public static final SoundEvent UI_MENU_OPEN   = register("ui.menu_open");
     public static final SoundEvent UI_MENU_BACK   = register("ui.menu_back");
     public static final SoundEvent UI_MOUSEMENU   = register("ui.mousemenu");
+<<<<<<< HEAD
+=======
+    public static final SoundEvent BONFIRE_AMBIENT = register("bonfire.ambient");
+    public static final SoundEvent BONFIRE_SIT     = register("bonfire.sit");
+>>>>>>> ba47194 (Melhora no sistema de BonFire)
 
     private ModSounds() {}
 

@@ -17,7 +17,11 @@ public final class ModBlocks {
     public static final Block BONFIRE = register("bonfire",
             new BonfireBlock(AbstractBlock.Settings.copy(Blocks.CAMPFIRE)
                     .strength(2.0f)
+<<<<<<< HEAD
                     .luminance(state -> 14)
+=======
+                    .luminance(state -> state.get(BonfireBlock.LIT) ? 14 : 2)
+>>>>>>> ba47194 (Melhora no sistema de BonFire)
                     .sounds(BlockSoundGroup.METAL)
                     .nonOpaque()));
 

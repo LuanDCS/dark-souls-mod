@@ -14,8 +14,25 @@
   "ui.mousemenu": {
     "category": "master",
     "sounds": [
+<<<<<<< HEAD
       { "name": "darksouls:mousemenu", "stream": false },
       { "name": "darksouls:mouse_hover", "stream": false }
     ]
+=======
+      { "name": "darksouls:mouse_hover", "stream": false }
+    ]
+  },
+  "bonfire.ambient": {
+    "category": "blocks",
+    "sounds": [
+      { "name": "darksouls:bonfire_ambient", "stream": false }
+    ]
+  },
+  "bonfire.sit": {
+    "category": "player",
+    "sounds": [
+      { "name": "darksouls:bonfire_sit", "stream": false }
+    ]
+>>>>>>> ba47194 (Melhora no sistema de BonFire)
   }
 }

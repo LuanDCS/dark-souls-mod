@@ -1,5 +1,10 @@
 {
   "variants": {
+<<<<<<< HEAD
     "": { "model": "darksouls:block/bonfire" }
+=======
+    "lit=false": { "model": "darksouls:block/bonfire" },
+    "lit=true": { "model": "darksouls:block/bonfire" }
+>>>>>>> ba47194 (Melhora no sistema de BonFire)
   }
 }

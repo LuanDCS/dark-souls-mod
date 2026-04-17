@@ -59,6 +59,14 @@ public final class StaminaManager {
         STATES.remove(uuid);
     }
 
+    /** Fully refill current stamina and sync immediately. */
+    public static void restoreToMax(ServerPlayerEntity player) {
+        StaminaState s = get(player);
+        s.setCurrent(s.max);
+        s.regenCooldown = 0;
+        ModNetworking.sendStamina(player, s);
+    }
+
     public static void tickAll(MinecraftServer server) {
         for (ServerPlayerEntity player : server.getPlayerManager().getPlayerList()) {
             tickPlayer(player);
