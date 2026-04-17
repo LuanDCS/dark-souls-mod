@@ -1,0 +1,9 @@
+{
+  "required": true,
+  "package": "com.darksouls.mixin.client",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "InGameHudMixin"
+  ],
+  "injectors": { "defaultRequire": 1 }
+}

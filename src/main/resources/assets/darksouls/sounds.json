@@ -1,0 +1,14 @@
+{
+  "ui.mouse_hover": {
+    "category": "master",
+    "sounds": [ { "name": "darksouls:mouse_hover", "stream": false } ]
+  },
+  "ui.menu_open": {
+    "category": "master",
+    "sounds": [ { "name": "darksouls:menu_open", "stream": false } ]
+  },
+  "ui.menu_back": {
+    "category": "master",
+    "sounds": [ { "name": "darksouls:menu_back", "stream": false } ]
+  }
+}

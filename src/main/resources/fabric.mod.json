@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "darksouls",
+  "version": "${version}",
+  "name": "Dark Souls HUD",
+  "description": "Dark Souls 1 inspired HP and Stamina HUD for Minecraft.",
+  "authors": ["luand"],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.darksouls.DarkSoulsMod"],
+    "client": ["com.darksouls.DarkSoulsClient"]
+  },
+  "mixins": [
+    "darksouls.mixins.json",
+    { "config": "darksouls.client.mixins.json", "environment": "client" }
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "fabric-api": "*",
+    "minecraft": "~1.21.1",
+    "java": ">=21"
+  }
+}
