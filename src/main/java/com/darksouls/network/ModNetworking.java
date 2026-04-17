@@ -20,6 +20,7 @@ public final class ModNetworking {
         PayloadTypeRegistry.playS2C().register(StaminaPayload.ID, StaminaPayload.CODEC);
         PayloadTypeRegistry.playS2C().register(CharacterSyncPayload.ID, CharacterSyncPayload.CODEC);
         PayloadTypeRegistry.playC2S().register(CreateCharacterPayload.ID, CreateCharacterPayload.CODEC);
+        PayloadTypeRegistry.playC2S().register(RestAtBonfirePayload.ID, RestAtBonfirePayload.CODEC);
 
         ServerPlayNetworking.registerGlobalReceiver(CreateCharacterPayload.ID, (payload, ctx) -> {
             ServerPlayerEntity player = ctx.player();
@@ -30,6 +31,14 @@ public final class ModNetworking {
                 if (!created) {
                     CharacterManager.syncToClient(player);
                 }
+            });
+        });
+
+        ServerPlayNetworking.registerGlobalReceiver(RestAtBonfirePayload.ID, (payload, ctx) -> {
+            ServerPlayerEntity player = ctx.player();
+            ctx.server().execute(() -> {
+                player.setHealth(player.getMaxHealth());
+                player.getHungerManager().setFoodLevel(20);
             });
         });
     }
@@ -54,5 +63,10 @@ public final class ModNetworking {
     @Environment(EnvType.CLIENT)
     public static void sendCreate(String name, CharacterClass cls, Gift gift) {
         ClientPlayNetworking.send(new CreateCharacterPayload(name, cls.ordinal(), gift.ordinal()));
+    }
+
+    @Environment(EnvType.CLIENT)
+    public static void sendRestAtBonfire() {
+        ClientPlayNetworking.send(new RestAtBonfirePayload());
     }
 }

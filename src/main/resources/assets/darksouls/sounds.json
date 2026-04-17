@@ -10,5 +10,12 @@
   "ui.menu_back": {
     "category": "master",
     "sounds": [ { "name": "darksouls:menu_back", "stream": false } ]
+  },
+  "ui.mousemenu": {
+    "category": "master",
+    "sounds": [
+      { "name": "darksouls:mousemenu", "stream": false },
+      { "name": "darksouls:mouse_hover", "stream": false }
+    ]
   }
 }

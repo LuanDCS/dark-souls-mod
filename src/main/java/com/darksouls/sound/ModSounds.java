@@ -15,6 +15,7 @@ public final class ModSounds {
     public static final SoundEvent UI_MOUSE_HOVER = register("ui.mouse_hover");
     public static final SoundEvent UI_MENU_OPEN   = register("ui.menu_open");
     public static final SoundEvent UI_MENU_BACK   = register("ui.menu_back");
+    public static final SoundEvent UI_MOUSEMENU   = register("ui.mousemenu");
 
     private ModSounds() {}
 

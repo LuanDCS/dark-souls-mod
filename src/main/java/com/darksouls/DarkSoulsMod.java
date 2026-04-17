@@ -1,5 +1,6 @@
 package com.darksouls;
 
+import com.darksouls.block.ModBlocks;
 import com.darksouls.network.ModNetworking;
 import com.darksouls.sound.ModSounds;
 import com.darksouls.stats.CharacterManager;
@@ -21,6 +22,7 @@ public final class DarkSoulsMod implements ModInitializer {
     @Override
     public void onInitialize() {
         ModSounds.init();
+        ModBlocks.init();
         ModNetworking.registerServer();
 
         ServerTickEvents.END_SERVER_TICK.register(StaminaManager::tickAll);

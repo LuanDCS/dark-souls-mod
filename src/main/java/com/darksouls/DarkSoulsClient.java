@@ -1,5 +1,6 @@
 package com.darksouls;
 
+import com.darksouls.client.BonfireHandler;
 import com.darksouls.client.ModKeybindings;
 import com.darksouls.hud.DarkSoulsHud;
 import com.darksouls.network.ModNetworking;
@@ -11,6 +12,7 @@ public final class DarkSoulsClient implements ClientModInitializer {
     public void onInitializeClient() {
         ModNetworking.registerClient();
         ModKeybindings.register();
+        BonfireHandler.register();
         HudRenderCallback.EVENT.register(new DarkSoulsHud());
     }
 }
